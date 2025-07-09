@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niscala Jyoti Institute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212; /* Deep, dark grey */
+            color: #E0E0E0; /* Soft, light grey text */
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, modern, readable font */
+            font-weight: 300; /* Lighter font weight for elegance */
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1400px; /* Increased max-width for 3 columns */
+            gap: 3rem; /* Increased gap for better separation */
+        }
+
+        .column {
+            flex: 1;
+            text-align: left; /* Left-align for readability of poetic text */
+            line-height: 1.7;
+        }
+        
+        .column-image {
+            text-align: center;
+            padding-top: 1rem; /* Slight adjustment for visual balance */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(20%) opacity(85%); /* Subtle filter to blend with the dark theme */
+        }
+        
+        /* The "hidden link" for the Vows column */
+        a.vows-link {
+            color: inherit;
+            text-decoration: none;
+            display: block; /* Makes the whole column area clickable */
+            transition: background-color 0.3s ease; /* Subtle feedback on hover */
+        }
+
+        a.vows-link:hover {
+            background-color: #1a1a1a; /* Very subtle glow on hover */
+            cursor: pointer;
+        }
+        
+        /* Styling for the titles of each Vow and Attunement */
+        .item-title {
+            font-weight: 400;
+            color: #AAAAAA; /* A slightly different shade for titles */
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.5em; /* Space between items */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="column column-image">
+            <img src="FiveVows.jpg" alt="Five Vows yantra">
+        </div>
+
+        <div class="column">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="vows-link">
+                <div>
+                    <div class="item-title">Vow 1: Purpose: Alleviate Woe</div>
+                    <p>Witness Woe,<br>Plant Wisdom's Seed:<br>Boundless Honeylight</p>
+                </div>
+                <div>
+                    <div class="item-title">Vow 2: Method: Graceful Power</div>
+                    <p>Don't contend,<br>Nourish all:<br>be Water.</p>
+                </div>
+                <div>
+                    <div class="item-title">Vow 3: Conduct: Don't be an Asshole</div>
+                    <p>Think, speak, act:<br>Kindness,<br>never ill.</p>
+                </div>
+                <div>
+                    <div class="item-title">Vow 4: Integrity: Know Nature</div>
+                    <p>Stay back,<br>in front;<br>stay outside,<br>within.</p>
+                </div>
+                <div>
+                    <div class="item-title">Vow 5: Evolution: Never Stagnate</div>
+                    <p>From flux,<br>learn;<br>refine the lens.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="column">
+            <div>
+                <div class="item-title">Attunement 1: The Still Flame Attunement</div>
+                <p>From serene depth,<br>flow with Vow-fire.</p>
+            </div>
+            <div>
+                <div class="item-title">Attunement 2: The Grounding Attunement</div>
+                <p>The Shaman's Fire:<br>a fever dream.<br>The Scientist's Anchor:<br>a cage.<br>Walk the razor's edge.</p>
+            </div>
+            <div>
+                <div class="item-title">Attunement 3: The Compressed Air Attunement</div>
+                <p>From your Throne of Wisdom,<br>the Sound that Breaks the Silence:<br>a Fart.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
