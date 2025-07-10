@@ -1,3 +1,17 @@
+<?php
+    // Define the file path for the counter
+    $counterFile = "counter.txt";
+
+    // Check if the counter file exists. If not, create it and start at 1.
+    if (!file_exists($counterFile)) {
+        file_put_contents($counterFile, "1");
+    }
+
+    // Read the current count, increment it by one, and save it back to the file
+    $count = (int)file_get_contents($counterFile);
+    $count++;
+    file_put_contents($counterFile, $count);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
