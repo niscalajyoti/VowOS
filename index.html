@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niscala Jyoti Institute</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #121212; /* Deep, dark grey */
@@ -60,16 +57,45 @@
             cursor: pointer;
         }
         
-        /* Styling for the titles of each Vow and Attunement */
+        /* --- NEW AND MODIFIED STYLES FOR VOW LAYOUT --- */
+
+        .vow-container {
+            margin-bottom: 2.5em; /* Space between each Vow block */
+        }
+
+        .vow-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline; /* Aligns text along the baseline */
+            gap: 1.5em; /* Provides space between title and number */
+        }
+
+        .vow-number {
+            font-weight: 400; /* Bolder than the subtitle */
+            color: #E0E0E0;
+            white-space: nowrap; /* Prevents "Vow X" from wrapping */
+        }
+        
         .item-title {
-            font-weight: 400;
+            font-weight: 300;
             color: #AAAAAA; /* A slightly different shade for titles */
-            margin-bottom: 0.5em;
+            margin-bottom: 0; /* Margin is now on vow-container */
+        }
+        
+        .title-right {
+            text-align: right;
+            width: 100%;
+        }
+
+        .vow-text {
+            margin-top: 0.5em; /* Space between header and the vow text */
+            margin-bottom: 0;
+            line-height: 1.4; /* Tighter line height to match image */
         }
 
         p {
             margin-top: 0;
-            margin-bottom: 1.5em; /* Space between items */
+            margin-bottom: 1.5em; /* Space between non-vow items */
         }
 
     </style>
@@ -84,26 +110,43 @@
         </div>
 
         <div class="column">
-                <div>
-                    <div class="item-title">Vow 1: Purpose: Alleviate Woe</div>
-                    <p>Witness Woe,<br>Plant Wisdom's Seed:<br>Boundless Honeylight</p>
+            <div class="vow-container">
+                <div class="vow-number">Vow 1</div>
+                <div class="item-title">Purpose: Alleviate Woe</div>
+                <p class="vow-text">Witness Woe,<br>Plant Wisdom's Seed:<br>Boundless Honeylight</p>
+            </div>
+
+            <div class="vow-container">
+                <div class="vow-header">
+                    <div class="item-title">Method: Graceful Power</div>
+                    <div class="vow-number">Vow 2</div>
                 </div>
-                <div>
-                    <div class="item-title">Vow 2: Method: Graceful Power</div>
-                    <p>Don't contend,<br>Nourish all:<br>be Water.</p>
+                <p class="vow-text">Don't contend,<br>Nourish all:<br>be Water.</p>
+            </div>
+
+            <div class="vow-container">
+                <div class="vow-header">
+                    <div class="vow-number">Vow 3</div>
+                    <div class="item-title title-right">Conduct: Don't be an Asshole</div>
                 </div>
-                <div>
-                    <div class="item-title">Vow 3: Conduct: Don't be an Asshole</div>
-                    <p>Think, speak, act:<br>Kindness,<br>never ill.</p>
+                <p class="vow-text">Think, speak, act:<br>Kindness,<br>never ill.</p>
+            </div>
+
+            <div class="vow-container">
+                <div class="vow-header">
+                    <div class="item-title">Integrity: Know Nature</div>
+                    <div class="vow-number">Vow 4</div>
                 </div>
-                <div>
-                    <div class="item-title">Vow 4: Integrity: Know Nature</div>
-                    <p>Stay back,<br>in front;<br>stay outside,<br>within.</p>
+                <p class="vow-text">Stay back,<br>in front;<br>stay outside,<br>within.</p>
+            </div>
+
+            <div class="vow-container">
+                <div class="vow-header">
+                    <div class="vow-number">Vow 5</div>
+                    <div class="item-title title-right">Evolution: Never Stagnate</div>
                 </div>
-                <div>
-                    <div class="item-title">Vow 5: Evolution: Never Stagnate</div>
-                    <p>From flux,<br>learn;<br>refine the lens.</p>
-                </div>
+                <p class="vow-text">From flux,<br>learn;<br>refine the lens.</p>
+            </div>
         </div>
 
         <div class="column">
