@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Downloading The Five Vows...</title>
+
     <script data-goatcounter="https://fivevows.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
-    <script>
-        // Wait for the entire page, including the GoatCounter script, to fully load.
-        window.addEventListener('load', function() {
-            // Wait just a fraction of a second to be safe, then redirect.
-            setTimeout(function() {
-                window.location.href = 'The_Five_Vows-VowOS.pdf';
-            }, 250); // 250 milliseconds
-        });
-    </script>
-
-
 </head>
 <body style="background-color: #121212; color: #E0E0E0; font-family: 'Courier New', monospace; text-align: center; padding-top: 5rem;">
 
     <p>Your download will begin shortly...</p>
     <p><a href="The_Five_Vows-VowOS.pdf" style="color: #AAAAAA;">Click here if your download does not start.</a></p>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                window.location.href = 'The_Five_Vows-VowOS.pdf';
+            }, 250);
+        });
+    </script>
 
 </body>
 </html>
