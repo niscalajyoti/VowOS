@@ -156,7 +156,7 @@
 
     <div class="container">
         <div class="column column-image">
-            <a href="The_Five_Vows-VowOS.pdf" target="_blank" rel="noopener noreferrer" class="vows-link">
+            <a href="download.php" class="vows-link">
                 <img src="FiveVows.png" alt="Five Vows yantra">
             </a>
         </div>
