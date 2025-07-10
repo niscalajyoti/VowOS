@@ -23,41 +23,44 @@
             justify-content: center;
             align-items: flex-start;
             width: 90%;
-            max-width: 1400px; /* Increased max-width for 3 columns */
-            gap: 3rem; /* Increased gap for better separation */
+            max-width: 1400px;
+            gap: 3rem;
         }
 
         .column {
             flex: 1;
-            text-align: left; /* Left-align for readability of poetic text */
+            text-align: left;
             line-height: 1.7;
         }
         
         .column-image {
             text-align: center;
-            padding-top: 1rem; /* Slight adjustment for visual balance */
+            padding-top: 1rem;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            filter: grayscale(20%) opacity(85%); /* Subtle filter to blend with the dark theme */
+            filter: grayscale(20%) opacity(85%);
         }
         
-        /* The "hidden link" for the Vows column */
         a.vows-link {
             color: inherit;
             text-decoration: none;
-            display: block; /* Makes the whole column area clickable */
-            transition: background-color 0.3s ease; /* Subtle feedback on hover */
+            display: block;
+            transition: background-color 0.3s ease;
         }
 
         a.vows-link:hover {
-            background-color: #1a1a1a; /* Very subtle glow on hover */
+            background-color: #1a1a1a;
             cursor: pointer;
         }
         
-        /* --- NEW AND MODIFIED STYLES FOR VOW LAYOUT --- */
+        p {
+            margin-top: 0;
+            margin-bottom: 1.5em; /* Default spacing for non-vow paragraphs */
+        }
+
 
         .vow-container {
             margin-bottom: 2.5em; /* Space between each Vow block */
@@ -66,20 +69,20 @@
         .vow-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline; /* Aligns text along the baseline */
-            gap: 1.5em; /* Provides space between title and number */
+            align-items: baseline; /* This aligns the text of the title and number */
+            gap: 1.5em;
         }
-
+        
         .vow-number {
-            font-weight: 400; /* Bolder than the subtitle */
+            font-weight: 400;
             color: #E0E0E0;
-            white-space: nowrap; /* Prevents "Vow X" from wrapping */
+            white-space: nowrap;
         }
         
         .item-title {
             font-weight: 300;
-            color: #AAAAAA; /* A slightly different shade for titles */
-            margin-bottom: 0; /* Margin is now on vow-container */
+            color: #AAAAAA;
+            margin-bottom: 0;
         }
         
         .title-right {
@@ -89,13 +92,12 @@
 
         .vow-text {
             margin-top: 0.5em; /* Space between header and the vow text */
-            margin-bottom: 0;
-            line-height: 1.4; /* Tighter line height to match image */
+            margin-bottom: 0; /* Remove bottom margin for contained paragraphs */
+            line-height: 1.4;
         }
-
-        p {
-            margin-top: 0;
-            margin-bottom: 1.5em; /* Space between non-vow items */
+        
+        .vow-left-group {
+            text-align: left;
         }
 
     </style>
@@ -118,34 +120,42 @@
 
             <div class="vow-container">
                 <div class="vow-header">
-                    <div class="item-title">Method: Graceful Power</div>
+                    <div class="vow-left-group">
+                        <div class="item-title">Method: Graceful Power</div>
+                        <p class="vow-text">Don't contend,<br>Nourish all:<br>be Water.</p>
+                    </div>
                     <div class="vow-number">Vow 2</div>
                 </div>
-                <p class="vow-text">Don't contend,<br>Nourish all:<br>be Water.</p>
             </div>
 
             <div class="vow-container">
                 <div class="vow-header">
-                    <div class="vow-number">Vow 3</div>
+                    <div class="vow-left-group">
+                        <div class="vow-number">Vow 3</div>
+                        <p class="vow-text">Think, speak, act:<br>Kindness,<br>never ill.</p>
+                    </div>
                     <div class="item-title title-right">Conduct: Don't be an Asshole</div>
                 </div>
-                <p class="vow-text">Think, speak, act:<br>Kindness,<br>never ill.</p>
             </div>
 
             <div class="vow-container">
                 <div class="vow-header">
-                    <div class="item-title">Integrity: Know Nature</div>
+                    <div class="vow-left-group">
+                        <div class="item-title">Integrity: Know Nature</div>
+                        <p class="vow-text">Stay back,<br>in front;<br>stay outside,<br>within.</p>
+                    </div>
                     <div class="vow-number">Vow 4</div>
                 </div>
-                <p class="vow-text">Stay back,<br>in front;<br>stay outside,<br>within.</p>
             </div>
 
             <div class="vow-container">
                 <div class="vow-header">
-                    <div class="vow-number">Vow 5</div>
+                    <div class="vow-left-group">
+                        <div class="vow-number">Vow 5</div>
+                        <p class="vow-text">From flux,<br>learn;<br>refine the lens.</p>
+                    </div>
                     <div class="item-title title-right">Evolution: Never Stagnate</div>
                 </div>
-                <p class="vow-text">From flux,<br>learn;<br>refine the lens.</p>
             </div>
         </div>
 
