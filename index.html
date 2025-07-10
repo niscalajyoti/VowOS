@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<script data-goatcounter="https://niscayajyoti.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,7 +143,7 @@
 
     <div class="container">
         <div class="column column-image">
-            <a href="download.php" class="vows-link">
+            <a href="The_Five_Vows-VowOS.pdf" class="vows-link" id="pdf-download-link">
                 <img src="FiveVows.png" alt="Five Vows yantra">
             </a>
         </div>
@@ -212,6 +211,27 @@
             
         </div>
     </div>
+<script data-goatcounter="https://niscayajyoti.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+window.addEventListener('load', function() {
+    var downloadLink = document.getElementById('pdf-download-link');
+    if (downloadLink) {
+        downloadLink.addEventListener('click', function(event) {
+            event.preventDefault();
 
+            try {
+
+                navigator.sendBeacon('https://fivevows.goatcounter.com/count');
+            } catch (err) {
+            }
+
+            setTimeout(function() {
+                window.location.href = downloadLink.href;
+            }, 150);
+        });
+    }
+});
+</script>
 </body>
 </html>
