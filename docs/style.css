@@ -24,6 +24,137 @@ p { font-family: 'Courier New', monospace; font-size: 16px; color: #E0E0E0; marg
 a { font-family: 'Courier New', monospace; font-size: 16px; color: #AAAAAA; text-decoration: none; transition: font-weight 0.2s ease-in-out; }
 a:hover { font-weight: bold; text-decoration: underline; }
 
+/* --- NUMBERED LISTS WITH ARABIC NUMERALS --- */
+.nl1 {
+    counter-reset: level1;
+    list-style: none;
+    padding-left: 0;
+    margin: 1em 0;
+}
+
+.nl1 > li {
+    counter-increment: level1;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+.nl1 > li::before {
+    content: counter(level1, arabic-indic) ".";
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+.nl2 {
+    counter-reset: level2;
+    list-style: none;
+    padding-left: 2em;
+    margin: 0.5em 0;
+}
+
+.nl2 > li {
+    counter-increment: level2;
+    position: relative;
+    padding-left: 3em;
+    margin-bottom: 0.3em;
+}
+
+.nl2 > li::before {
+    content: counter(level1, arabic-indic) "." counter(level2, arabic-indic) ".";
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+.nl3 {
+    counter-reset: level3;
+    list-style: none;
+    padding-left: 4em;
+    margin: 0.5em 0;
+}
+
+.nl3 > li {
+    counter-increment: level3;
+    position: relative;
+    padding-left: 4em;
+    margin-bottom: 0.3em;
+}
+
+.nl3 > li::before {
+    content: counter(level1, arabic-indic) "." counter(level2, arabic-indic) "." counter(level3, arabic-indic);
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+/* --- POINT LISTS WITH DISTINCT SYMBOLS --- */
+.pl1 {
+    list-style: none;
+    padding-left: 0;
+    margin: 1em 0;
+}
+
+.pl1 > li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+.pl1 > li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-size: 16px;
+}
+
+.pl2 {
+    list-style: none;
+    padding-left: 2em;
+    margin: 0.5em 0;
+}
+
+.pl2 > li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.3em;
+}
+
+.pl2 > li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-size: 14px;
+}
+
+.pl3 {
+    list-style: none;
+    padding-left: 4em;
+    margin: 0.5em 0;
+}
+
+.pl3 > li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.3em;
+}
+
+.pl3 > li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #E0E0E0;
+    font-size: 14px;
+}
+
 /* --- NAVIGATION LINKS --- */
 .navigation-links { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid #444; display: flex; justify-content: space-between; font-size: 16px; }
 .nav-link { color: #E0E0E0; font-weight: bold; letter-spacing: 1px; text-decoration: none; transition: color 0.3s ease; }
