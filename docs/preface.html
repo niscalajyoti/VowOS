@@ -30,7 +30,7 @@
             <div id="hidden-content" class="expandable-content">
                 <!-- Vow 1 (Integration): This wrapper will be filled by our script -->
                 <div class="content-wrapper" id="shared-content-wrapper">
-                    <p>Loading Gnosis...</p>
+                    {% include vowos_alchemy_and_calibration.html %}
                 </div>
             </div>
         </div>
@@ -38,37 +38,14 @@
     </div>
 
     <!-- Vow 5 (Evolution): The script has been evolved to fetch external content -->
-    <script>
-        // This function now only handles the visual toggling
-        function toggleGnosis() {
-            const content = document.getElementById('hidden-content');
-            if (content) {
-                content.classList.toggle('expanded');
-            }
-        }
-
-        // Vow 2 (Method): This new function fetches and integrates the content
-        async function loadSharedContent() {
-            const wrapper = document.getElementById('shared-content-wrapper');
-            try {
-                // Fetch the content from your central file
-                const response = await fetch('vowos_alchemy_and_calibration.html');
-                if (!response.ok) {
-                    // Vow 3 (Kindness): Provide a clear error if the file is not found
-                    throw new Error('Network response was not ok.');
-                }
-                const text = await response.text();
-                // Place the fetched content into the wrapper
-                wrapper.innerHTML = text;
-            } catch (error) {
-                console.error('Error fetching shared content:', error);
-                wrapper.innerHTML = '<p>Could not load the sacred text. Please ensure shared-content.html exists.</p>';
-            }
-        }
-
-        // Vow 4 (Know Nature): We wait for the page to be fully structured before we act
-        document.addEventListener('DOMContentLoaded', loadSharedContent);
-    </script>
+	<script>
+	    function toggleGnosis() {
+	        const content = document.getElementById('hidden-content');
+	        if (content) {
+	            content.classList.toggle('expanded');
+	        }
+	    }
+	</script>
 </body>
 </html>
 
