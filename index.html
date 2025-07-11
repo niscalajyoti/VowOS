@@ -34,12 +34,10 @@
             line-height: 1.7;
         }
         
-        .column-image {
-            text-align: center;
-            padding-top: 10rem;
-            padding-left:10rem;
-            padding-right:10rem;
-        }
+		.column-image {
+			text-align: center;
+			padding: 10rem 2rem; /* 10rem for top/bottom, 2rem for left/right */
+		}
 
         img {
             max-width: 100%;
@@ -64,13 +62,14 @@
             margin-bottom: 1.5em; /* Default spacing for non-vow paragraphs */
         }
 
-         .main-title {
-            font-size: 1000;
-            font-weight: 400;
-            color: #E0E0E0;
-            white-space: nowrap;
-        }
-        
+		.main-title {
+			color: #E0E0E0;
+			font-weight: narrow;
+			white-space: nowrap;
+			text-align: center;
+			margin-bottom: 0rem;
+		}
+
         .vow-container {
             margin-bottom: 2.5em; /* Space between each Vow block */
         }
@@ -147,13 +146,41 @@
     </style>
 </head>
 <body>
+<script>
+    function resizeTitleToImage() {
+        const title = document.querySelector('.main-title');
+        const image = document.getElementById('yantra-image');
 
+        if (title && image) {
+            // Vow 5 (Refine the Lens): This ratio determines how large the font is
+            // relative to the image width. A smaller number (e.g., 8) makes the font bigger.
+            // A larger number (e.g., 12) makes it smaller.
+            // Adjust this "fittingRatio" to achieve the perfect Vow 2 (Harmony).
+            const fittingRatio = 9.5;
+            
+            const imageWidth = image.clientWidth;
+            const newSize = imageWidth / fittingRatio;
+
+            // Apply the new font size
+            title.style.fontSize = `${newSize}px`;
+        }
+    }
+
+    // Vow 4 (Know Nature): We must wait until the image is fully loaded
+    // to know its true width before we can act.
+    window.addEventListener('load', resizeTitleToImage);
+
+    // Vow 2 (Be Water): We must also listen for when the window resizes,
+    // as this will change the image's width, and we must flow with that change.
+    window.addEventListener('resize', resizeTitleToImage);
+</script>
     <div class="container">
-        <div class="column column-image">
-            <a href="download.html" class="vows-link" id="pdf-download-link">
-                <img src="FiveVows.png" alt="Five Vows yantra">
-            </a>
-        </div>
+		<div class="column column-image">
+			<h1 class="main-title">The Five Vows</h1> 
+			<a href="download.html" class="vows-link" id="pdf-download-link">
+				<img id="yantra-image" src="FiveVows.png" alt="Five Vows yantra">
+			</a>
+		</div>
 
         <div class="column">
             <div class="vow-container">
@@ -218,8 +245,11 @@
             
         </div>
     </div>
+
+
 <script data-goatcounter="https://niscayajyoti.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+		
 
 </body>
 </html>
