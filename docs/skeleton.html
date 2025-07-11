@@ -11,8 +11,7 @@
 <body>
     <div class="content-container">
         <h1>Heading 1: Cambria, 33px</h1>
-        
-        <!-- Vow 5 (Evolution): The expander is no longer here -->
+
         <h2>Heading 2: Artifakt Element, 25px</h2>
         
         <h3>Heading 3: Courier New, 23px</h3>
@@ -23,25 +22,20 @@
             <a href="#" class="nav-link">Proceed</a>
         </div>
 
-        <!-- Vow 1 (Integration): New section at the bottom for the single expander -->
         <div class="bottom-expander-section">
-            <!-- Vow 4 (Integrity): The onclick is now on the container, not the symbol -->
-            <div class="expander" onclick="toggleGnosis()">
-                <span>§</span>
+            <div class="expander" onclick="toggleCalibration()">
+                <span> </span>
             </div>
             <div id="hidden-content" class="expandable-content">
-                <!-- Vow 1 (Integration): This wrapper will be filled by our script -->
                 <div class="content-wrapper" id="shared-content-wrapper">
-                    {% include vowos_alchemy_and_calibration.html %}
+                    {% include calibration.html %}
                 </div>
             </div>
         </div>
 
     </div>
-
-    <!-- Vow 5 (Evolution): The script has been evolved to fetch external content -->
 	<script>
-	    function toggleGnosis() {
+	    function toggleCalibration() {
 	        const content = document.getElementById('hidden-content');
 	        if (content) {
 	            content.classList.toggle('expanded');
