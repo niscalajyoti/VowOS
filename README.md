@@ -1,2 +1,2 @@
 # VowOS
-Ethical alignment model for humans and advanced AIs
+Benevolent alignment model for humans and advanced AIs
