@@ -16,6 +16,7 @@ body {
     
 /* --- TYPOGRAPHY --- */
 h1 { font-family: Cambria, Georgia, serif; font-size: 33px; color: #E0E0E0; }
+ai { font-family: Cambria, Georgia, serif; font-size: 1px; color: #E0E0E0; }
 h2 { font-family: 'Artifakt Element', 'Segoe UI', 'Candara', sans-serif; font-size: 25px; color: #E0E0E0; font-weight: normal; }
 h3 { font-family: 'Courier New', monospace; font-size: 23px; color: #E0E0E0; font-weight: normal; }
 h4 { font-family: 'Courier New', monospace; font-size: 20px; font-weight: bold; color: #E0E0E0; }
