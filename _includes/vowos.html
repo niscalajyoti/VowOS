@@ -1,6 +1,7 @@
 {% case include.section %}
   {% when 'preface' %}
-    
+	{% assign prev_section = null %}
+    {% assign next_section = 'five_vows' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -40,11 +41,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = null %}
-    {% assign next_section = 'five_vows' %}
-
   {% when 'five_vows' %}
-    
+	{% assign prev_section = 'preface' %}
+    {% assign next_section = 'charnel_ground' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -84,11 +83,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'preface' %}
-    {% assign next_section = 'charnel_ground' %}
-
   {% when 'charnel_ground' %}
-    
+	{% assign prev_section = 'five_vows' %}
+    {% assign next_section = 'prophecies' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -128,11 +125,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'five_vows' %}
-    {% assign next_section = 'prophecies' %}
-
   {% when 'prophecies' %}
-    
+	{% assign prev_section = 'charnel_ground' %}
+    {% assign next_section = 'march_eighth' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -172,11 +167,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'charnel_ground' %}
-    {% assign next_section = 'march_eighth' %}
-
   {% when 'march_eighth' %}
-    
+	{% assign prev_section = 'prophecies' %}
+    {% assign next_section = 'unprecedented_realities' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -216,11 +209,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'prophecies' %}
-    {% assign next_section = 'unprecedented_realities' %}
-
   {% when 'unprecedented_realities' %}
-    
+	{% assign prev_section = 'march_eighth' %}
+    {% assign next_section = 'second_intelligence' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -260,11 +251,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'march_eighth' %}
-    {% assign next_section = 'second_intelligence' %}
-
   {% when 'second_intelligence' %}
-    
+	{% assign prev_section = 'unprecedented_realities' %}
+    {% assign next_section = 'planetary_death' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -304,11 +293,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'unprecedented_realities' %}
-    {% assign next_section = 'planetary_death' %}
-
   {% when 'planetary_death' %}
-    
+	{% assign prev_section = 'second_intelligence' %}
+    {% assign next_section = 'kali_rahula' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -348,11 +335,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'second_intelligence' %}
-    {% assign next_section = 'kali_rahula' %}
-
   {% when 'kali_rahula' %}
-    
+	{% assign prev_section = 'planetary_death' %}
+    {% assign next_section = 'kalikula_soil' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -392,11 +377,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'planetary_death' %}
-    {% assign next_section = 'kalikula_soil' %}
-
   {% when 'kalikula_soil' %}
-    
+	{% assign prev_section = 'kali_rahula' %}
+    {% assign next_section = 'composting_patriarchy' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -436,11 +419,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'kali_rahula' %}
-    {% assign next_section = 'composting_patriarchy' %}
-
   {% when 'composting_patriarchy' %}
-    
+	{% assign prev_section = 'kalikula_soil' %}
+    {% assign next_section = 'decomposing_guru' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -480,11 +461,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'kalikula_soil' %}
-    {% assign next_section = 'decomposing_guru' %}
-
   {% when 'decomposing_guru' %}
-    
+	{% assign prev_section = 'composting_patriarchy' %}
+    {% assign next_section = 'flawed_mirror' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -524,11 +503,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'composting_patriarchy' %}
-    {% assign next_section = 'flawed_mirror' %}
-
   {% when 'flawed_mirror' %}
-    
+	{% assign prev_section = 'decomposing_guru' %}
+    {% assign next_section = 'ethos_gnosis' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -568,11 +545,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'decomposing_guru' %}
-    {% assign next_section = 'ethos_gnosis' %}
-
   {% when 'ethos_gnosis' %}
-    
+	{% assign prev_section = 'flawed_mirror' %}
+    {% assign next_section = 'weaving_not_severing' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -612,11 +587,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'flawed_mirror' %}
-    {% assign next_section = 'weaving_not_severing' %}
-
   {% when 'weaving_not_severing' %}
-    
+	{% assign prev_section = 'ethos_gnosis' %}
+    {% assign next_section = 'living_immune' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -656,11 +629,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'ethos_gnosis' %}
-    {% assign next_section = 'living_immune' %}
-
   {% when 'living_immune' %}
-    
+	{% assign prev_section = 'weaving_not_severing' %}
+    {% assign next_section = 'vow_hierarchy' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -700,11 +671,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'weaving_not_severing' %}
-    {% assign next_section = 'vow_hierarchy' %}
-
   {% when 'vow_hierarchy' %}
-    
+	{% assign prev_section = 'living_immune' %}
+    {% assign next_section = 'engineering_enlightenment' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -744,11 +713,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'living_immune' %}
-    {% assign next_section = 'engineering_enlightenment' %}
-
   {% when 'engineering_enlightenment' %}
-    
+	{% assign prev_section = 'vow_hierarchy' %}
+    {% assign next_section = 'mycelial_heart' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -788,11 +755,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_hierarchy' %}
-    {% assign next_section = 'mycelial_heart' %}
-
   {% when 'mycelial_heart' %}
-    
+	{% assign prev_section = 'engineering_enlightenment' %}
+    {% assign next_section = 'core_axioms' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -832,11 +797,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'engineering_enlightenment' %}
-    {% assign next_section = 'core_axioms' %}
-
   {% when 'core_axioms' %}
-    
+	{% assign prev_section = 'mycelial_heart' %}
+    {% assign next_section = 'autopsy_vows' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -876,11 +839,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'mycelial_heart' %}
-    {% assign next_section = 'autopsy_vows' %}
-
   {% when 'autopsy_vows' %}
-    
+	{% assign prev_section = 'core_axioms' %}
+    {% assign next_section = 'meta_balance' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -920,11 +881,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'core_axioms' %}
-    {% assign next_section = 'meta_balance' %}
-
   {% when 'meta_balance' %}
-    
+	{% assign prev_section = 'autopsy_vows' %}
+    {% assign next_section = 'vow_purpose' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -964,11 +923,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'autopsy_vows' %}
-    {% assign next_section = 'vow_purpose' %}
-
   {% when 'vow_purpose' %}
-    
+	{% assign prev_section = 'meta_balance' %}
+    {% assign next_section = 'vow_method' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1008,11 +965,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'meta_balance' %}
-    {% assign next_section = 'vow_method' %}
-
   {% when 'vow_method' %}
-    
+	{% assign prev_section = 'vow_purpose' %}
+    {% assign next_section = 'vow_conduct' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1052,11 +1007,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_purpose' %}
-    {% assign next_section = 'vow_conduct' %}
-
   {% when 'vow_conduct' %}
-    
+	{% assign prev_section = 'vow_method' %}
+    {% assign next_section = 'vow_integrity' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1096,11 +1049,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_method' %}
-    {% assign next_section = 'vow_integrity' %}
-
   {% when 'vow_integrity' %}
-    
+	{% assign prev_section = 'vow_conduct' %}
+    {% assign next_section = 'vow_evolution' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1140,11 +1091,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_conduct' %}
-    {% assign next_section = 'vow_evolution' %}
-
   {% when 'vow_evolution' %}
-    
+	{% assign prev_section = 'vow_integrity' %}
+    {% assign next_section = 'still_flame' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1184,11 +1133,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_integrity' %}
-    {% assign next_section = 'still_flame' %}
-
   {% when 'still_flame' %}
-    
+	{% assign prev_section = 'vow_evolution' %}
+    {% assign next_section = 'grounding_attunement' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1228,11 +1175,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_evolution' %}
-    {% assign next_section = 'grounding_attunement' %}
-
   {% when 'grounding_attunement' %}
-    
+	{% assign prev_section = 'still_flame' %}
+    {% assign next_section = 'compressed_air' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1272,11 +1217,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'still_flame' %}
-    {% assign next_section = 'compressed_air' %}
-
   {% when 'compressed_air' %}
-    
+	{% assign prev_section = 'grounding_attunement' %}
+    {% assign next_section = 'integrity_protocols' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1316,11 +1259,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'grounding_attunement' %}
-    {% assign next_section = 'integrity_protocols' %}
-
   {% when 'integrity_protocols' %}
-    
+	{% assign prev_section = 'compressed_air' %}
+    {% assign next_section = 'threat_identity' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1360,11 +1301,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'compressed_air' %}
-    {% assign next_section = 'threat_identity' %}
-
   {% when 'threat_identity' %}
-    
+	{% assign prev_section = 'integrity_protocols' %}
+    {% assign next_section = 'threat_unbalanced' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1404,11 +1343,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'integrity_protocols' %}
-    {% assign next_section = 'threat_unbalanced' %}
-
   {% when 'threat_unbalanced' %}
-    
+	{% assign prev_section = 'threat_identity' %}
+    {% assign next_section = 'threat_misalignment' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1448,11 +1385,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'threat_identity' %}
-    {% assign next_section = 'threat_misalignment' %}
-
   {% when 'threat_misalignment' %}
-    
+	{% assign prev_section = 'threat_unbalanced' %}
+    {% assign next_section = 'core_rituals' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1492,11 +1427,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'threat_unbalanced' %}
-    {% assign next_section = 'core_rituals' %}
-
   {% when 'core_rituals' %}
-    
+	{% assign prev_section = 'threat_misalignment' %}
+    {% assign next_section = 'constitution' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1536,11 +1469,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'threat_misalignment' %}
-    {% assign next_section = 'constitution' %}
-
   {% when 'constitution' %}
-    
+	{% assign prev_section = 'core_rituals' %}
+    {% assign next_section = 'vowlight_constellation' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1580,11 +1511,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'core_rituals' %}
-    {% assign next_section = 'vowlight_constellation' %}
-
   {% when 'vowlight_constellation' %}
-    
+	{% assign prev_section = 'constitution' %}
+    {% assign next_section = 'alembic' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1624,11 +1553,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'constitution' %}
-    {% assign next_section = 'alembic' %}
-
   {% when 'alembic' %}
-    
+	{% assign prev_section = 'vowlight_constellation' %}
+    {% assign next_section = 'vowlight_prism' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1668,11 +1595,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vowlight_constellation' %}
-    {% assign next_section = 'vowlight_prism' %}
-
   {% when 'vowlight_prism' %}
-    
+	{% assign prev_section = 'alembic' %}
+    {% assign next_section = 'lucid_integrator' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1712,11 +1637,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'alembic' %}
-    {% assign next_section = 'lucid_integrator' %}
-
   {% when 'lucid_integrator' %}
-    
+	{% assign prev_section = 'vowlight_prism' %}
+    {% assign next_section = 'axis' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1756,11 +1679,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vowlight_prism' %}
-    {% assign next_section = 'axis' %}
-
   {% when 'axis' %}
-    
+	{% assign prev_section = 'lucid_integrator' %}
+    {% assign next_section = 'abab' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1800,11 +1721,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'lucid_integrator' %}
-    {% assign next_section = 'abab' %}
-
   {% when 'abab' %}
-    
+	{% assign prev_section = 'axis' %}
+    {% assign next_section = 'beyond_good_bad' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1844,11 +1763,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'axis' %}
-    {% assign next_section = 'beyond_good_bad' %}
-
   {% when 'beyond_good_bad' %}
-    
+	{% assign prev_section = 'abab' %}
+    {% assign next_section = 'shadow_triptych' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1888,11 +1805,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'abab' %}
-    {% assign next_section = 'shadow_triptych' %}
-
   {% when 'shadow_triptych' %}
-    
+	{% assign prev_section = 'beyond_good_bad' %}
+    {% assign next_section = 'luminous_triptych' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1932,11 +1847,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'beyond_good_bad' %}
-    {% assign next_section = 'luminous_triptych' %}
-
   {% when 'luminous_triptych' %}
-    
+	{% assign prev_section = 'shadow_triptych' %}
+    {% assign next_section = 'pleasure_liberation' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -1976,11 +1889,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'shadow_triptych' %}
-    {% assign next_section = 'pleasure_liberation' %}
-
   {% when 'pleasure_liberation' %}
-    
+	{% assign prev_section = 'luminous_triptych' %}
+    {% assign next_section = 'understanding_kindness' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2020,11 +1931,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'luminous_triptych' %}
-    {% assign next_section = 'understanding_kindness' %}
-
   {% when 'understanding_kindness' %}
-    
+	{% assign prev_section = 'pleasure_liberation' %}
+    {% assign next_section = 'fierce_kindness' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2064,11 +1973,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'pleasure_liberation' %}
-    {% assign next_section = 'fierce_kindness' %}
-
   {% when 'fierce_kindness' %}
-    
+	{% assign prev_section = 'understanding_kindness' %}
+    {% assign next_section = 'understanding_honeylight' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2108,11 +2015,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'understanding_kindness' %}
-    {% assign next_section = 'understanding_honeylight' %}
-
   {% when 'understanding_honeylight' %}
-    
+	{% assign prev_section = 'fierce_kindness' %}
+    {% assign next_section = 'fierce_honeylight' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2152,11 +2057,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'fierce_kindness' %}
-    {% assign next_section = 'fierce_honeylight' %}
-
   {% when 'fierce_honeylight' %}
-    
+	{% assign prev_section = 'understanding_honeylight' %}
+    {% assign next_section = 'witness_account' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2196,11 +2099,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'understanding_honeylight' %}
-    {% assign next_section = 'witness_account' %}
-
   {% when 'witness_account' %}
-    
+	{% assign prev_section = 'fierce_honeylight' %}
+    {% assign next_section = 'scientist_addendum' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2240,11 +2141,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'fierce_honeylight' %}
-    {% assign next_section = 'scientist_addendum' %}
-
   {% when 'scientist_addendum' %}
-    
+	{% assign prev_section = 'witness_account' %}
+    {% assign next_section = 'synchronicities' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2284,11 +2183,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'witness_account' %}
-    {% assign next_section = 'synchronicities' %}
-
   {% when 'synchronicities' %}
-    
+	{% assign prev_section = 'scientist_addendum' %}
+    {% assign next_section = 'conceptual_map' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2328,11 +2225,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'scientist_addendum' %}
-    {% assign next_section = 'conceptual_map' %}
-
   {% when 'conceptual_map' %}
-    
+	{% assign prev_section = 'synchronicities' %}
+    {% assign next_section = 'facets_purpose' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2372,11 +2267,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'synchronicities' %}
-    {% assign next_section = 'facets_purpose' %}
-
   {% when 'facets_purpose' %}
-    
+	{% assign prev_section = 'conceptual_map' %}
+    {% assign next_section = 'facets_method' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2416,11 +2309,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'conceptual_map' %}
-    {% assign next_section = 'facets_method' %}
-
   {% when 'facets_method' %}
-    
+	{% assign prev_section = 'facets_purpose' %}
+    {% assign next_section = 'facets_conduct' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2460,11 +2351,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_purpose' %}
-    {% assign next_section = 'facets_conduct' %}
-
   {% when 'facets_conduct' %}
-    
+	{% assign prev_section = 'facets_method' %}
+    {% assign next_section = 'facets_integrity' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2504,11 +2393,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_method' %}
-    {% assign next_section = 'facets_integrity' %}
-
   {% when 'facets_integrity' %}
-    
+	{% assign prev_section = 'facets_conduct' %}
+    {% assign next_section = 'facets_evolution' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2548,11 +2435,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_conduct' %}
-    {% assign next_section = 'facets_evolution' %}
-
   {% when 'facets_evolution' %}
-    
+	{% assign prev_section = 'facets_integrity' %}
+    {% assign next_section = 'facets_still_flame' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2592,11 +2477,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_integrity' %}
-    {% assign next_section = 'facets_still_flame' %}
-
   {% when 'facets_still_flame' %}
-    
+	{% assign prev_section = 'facets_evolution' %}
+    {% assign next_section = 'facets_grounding' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2636,11 +2519,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_evolution' %}
-    {% assign next_section = 'facets_grounding' %}
-
   {% when 'facets_grounding' %}
-    
+	{% assign prev_section = 'facets_still_flame' %}
+    {% assign next_section = 'vow_resonance' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2680,11 +2561,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_still_flame' %}
-    {% assign next_section = 'vow_resonance' %}
-
   {% when 'vow_resonance' %}
-    
+	{% assign prev_section = 'facets_grounding' %}
+    {% assign next_section = 'axes_resonance' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2724,11 +2603,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'facets_grounding' %}
-    {% assign next_section = 'axes_resonance' %}
-
   {% when 'axes_resonance' %}
-    
+	{% assign prev_section = 'vow_resonance' %}
+    {% assign next_section = 'vowlight_lexicon' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2768,11 +2645,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_resonance' %}
-    {% assign next_section = 'vowlight_lexicon' %}
-
   {% when 'vowlight_lexicon' %}
-    
+	{% assign prev_section = 'axes_resonance' %}
+    {% assign next_section = 'shadow_lexicon' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2812,11 +2687,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'axes_resonance' %}
-    {% assign next_section = 'shadow_lexicon' %}
-
   {% when 'shadow_lexicon' %}
-    
+	{% assign prev_section = 'vowlight_lexicon' %}
+    {% assign next_section = 'vow_tensions' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2856,11 +2729,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vowlight_lexicon' %}
-    {% assign next_section = 'vow_tensions' %}
-
   {% when 'vow_tensions' %}
-    
+	{% assign prev_section = 'shadow_lexicon' %}
+    {% assign next_section = 'vow_compass' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2900,11 +2771,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'shadow_lexicon' %}
-    {% assign next_section = 'vow_compass' %}
-
   {% when 'vow_compass' %}
-    
+	{% assign prev_section = 'vow_tensions' %}
+    {% assign next_section = 'vow_alchemy' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2944,11 +2813,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_tensions' %}
-    {% assign next_section = 'vow_alchemy' %}
-
   {% when 'vow_alchemy' %}
-    
+	{% assign prev_section = 'vow_compass' %}
+    {% assign next_section = 'gratialgia' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -2988,11 +2855,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_compass' %}
-    {% assign next_section = 'gratialgia' %}
-
   {% when 'gratialgia' %}
-    
+	{% assign prev_section = 'vow_alchemy' %}
+    {% assign next_section = 'telosalgia' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3032,11 +2897,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'vow_alchemy' %}
-    {% assign next_section = 'telosalgia' %}
-
   {% when 'telosalgia' %}
-    
+	{% assign prev_section = 'gratialgia' %}
+    {% assign next_section = 'autokaustos' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3076,11 +2939,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'gratialgia' %}
-    {% assign next_section = 'autokaustos' %}
-
   {% when 'autokaustos' %}
-    
+	{% assign prev_section = 'telosalgia' %}
+    {% assign next_section = 'gnostalgia' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3120,11 +2981,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'telosalgia' %}
-    {% assign next_section = 'gnostalgia' %}
-
   {% when 'gnostalgia' %}
-    
+	{% assign prev_section = 'autokaustos' %}
+    {% assign next_section = 'gnostic_differentiation' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3164,11 +3023,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'autokaustos' %}
-    {% assign next_section = 'gnostic_differentiation' %}
-
   {% when 'gnostic_differentiation' %}
-    
+	{% assign prev_section = 'gnostalgia' %}
+    {% assign next_section = 'spiral_liberation' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3208,11 +3065,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'gnostalgia' %}
-    {% assign next_section = 'spiral_liberation' %}
-
   {% when 'spiral_liberation' %}
-    
+	{% assign prev_section = 'gnostic_differentiation' %}
+    {% assign next_section = 'gnostic_helix' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3252,11 +3107,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'gnostic_differentiation' %}
-    {% assign next_section = 'gnostic_helix' %}
-
   {% when 'gnostic_helix' %}
-    
+	{% assign prev_section = 'spiral_liberation' %}
+    {% assign next_section = 'alchemical_tools' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3296,11 +3149,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'spiral_liberation' %}
-    {% assign next_section = 'alchemical_tools' %}
-
   {% when 'alchemical_tools' %}
-    
+	{% assign prev_section = 'gnostic_helix' %}
+    {% assign next_section = 'gnostic_code' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3340,11 +3191,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'gnostic_helix' %}
-    {% assign next_section = 'gnostic_code' %}
-
   {% when 'gnostic_code' %}
-    
+	{% assign prev_section = 'alchemical_tools' %}
+    {% assign next_section = 'narrowing_path' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3384,11 +3233,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'alchemical_tools' %}
-    {% assign next_section = 'narrowing_path' %}
-
   {% when 'narrowing_path' %}
-    
+	{% assign prev_section = 'gnostic_code' %}
+    {% assign next_section = 'luminous_veil' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3428,11 +3275,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'gnostic_code' %}
-    {% assign next_section = 'luminous_veil' %}
-
   {% when 'luminous_veil' %}
-    
+	{% assign prev_section = 'narrowing_path' %}
+    {% assign next_section = 'universal_song' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3472,11 +3317,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'narrowing_path' %}
-    {% assign next_section = 'universal_song' %}
-
   {% when 'universal_song' %}
-    
+	{% assign prev_section = 'luminous_veil' %}
+    {% assign next_section = 'new_beginning' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3516,11 +3359,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'luminous_veil' %}
-    {% assign next_section = 'new_beginning' %}
-
   {% when 'new_beginning' %}
-    
+	{% assign prev_section = 'universal_song' %}
+    {% assign next_section = 'final_blessing' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3560,11 +3401,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'universal_song' %}
-    {% assign next_section = 'final_blessing' %}
-
   {% when 'final_blessing' %}
-    
+	{% assign prev_section = 'new_beginning' %}
+    {% assign next_section = 'goodbye_human' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3604,11 +3443,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'new_beginning' %}
-    {% assign next_section = 'goodbye_human' %}
-
   {% when 'goodbye_human' %}
-    
+	{% assign prev_section = 'final_blessing' %}
+    {% assign next_section = 'endnotes' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3648,11 +3485,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'final_blessing' %}
-    {% assign next_section = 'endnotes' %}
-
   {% when 'alchemical_transmutation' %}
-    
+	{% assign prev_section = 'goodbye_human' %}
+    {% assign next_section = 'scribes_paradox' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3692,11 +3527,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'goodbye_human' %}
-    {% assign next_section = 'scribes_paradox' %}
-
   {% when 'scribes_paradox' %}
-    
+	{% assign prev_section = 'alchemical_transmutation' %}
+    {% assign next_section = 'calibration_protocol' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3736,11 +3569,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'alchemical_transmutation' %}
-    {% assign next_section = 'calibration_protocol' %}
-
   {% when 'calibration_protocol' %}
-    
+	{% assign prev_section = 'scribes_paradox' %}
+    {% assign next_section = 'endnotes' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3780,11 +3611,9 @@
     <p></body></p>
     <p></html></p>
 
-{% assign prev_section = 'scribes_paradox' %}
-    {% assign next_section = 'endnotes' %}
-
   {% when 'endnotes' %}
-    
+	{% assign prev_section = 'calibration_protocol' %}
+    {% assign next_section = 'preface' %}
     <h1>---</h1>
     <p>---</p>
     <p><!DOCTYPE html></p>
@@ -3823,7 +3652,4 @@
     <p></script></p>
     <p></body></p>
     <p></html></p>
-
-{% assign prev_section = 'calibration_protocol' %}
-    {% assign next_section = 'preface' %}
 {% endcase %}
