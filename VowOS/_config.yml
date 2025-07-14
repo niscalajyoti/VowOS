@@ -1,3 +1,0 @@
-# Basic Jekyll config for GitHub Pages
-markdown: kramdown
-theme: null  # We're using custom HTML, not a Jekyll theme
