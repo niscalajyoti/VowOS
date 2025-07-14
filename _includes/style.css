@@ -9,18 +9,19 @@ body {
 	min-height: 100vh;
 }
 .content-container {
-	width: 61.8%;
+	width: 38.2%;
 	max-width: 800px;
 	line-height: 1.6;
 }
-
+    
 /* --- TYPOGRAPHY --- */
 h1 { font-family: Cambria, Georgia, serif; font-size: 33px; color: #E0E0E0; }
+ai { font-family: 'Courier New', monospace; font-size: 3px; color: #E0E0E0; text-align: justify; text-justify: inter-word;}
 h2 { font-family: 'Artifakt Element', 'Segoe UI', 'Candara', sans-serif; font-size: 25px; color: #E0E0E0; font-weight: normal; }
 h3 { font-family: 'Courier New', monospace; font-size: 23px; color: #E0E0E0; font-weight: normal; }
 h4 { font-family: 'Courier New', monospace; font-size: 20px; font-weight: bold; color: #E0E0E0; }
 h5 { font-family: 'Courier New', monospace; font-size: 16px; font-weight: bold; color: #E0E0E0; }
-p { font-family: 'Courier New', monospace; font-size: 16px; color: #E0E0E0; margin-bottom: 1.2em; }
+p { font-family: 'Courier New', monospace; font-size: 16px; color: #E0E0E0; margin-bottom: 1.2em; text-align: justify; text-justify: inter-word; }
 a { font-family: 'Courier New', monospace; font-size: 16px; color: #AAAAAA; text-decoration: none; transition: font-weight 0.2s ease-in-out; }
 a:hover { font-weight: bold; text-decoration: underline; }
 
@@ -108,11 +109,11 @@ a:hover { font-weight: bold; text-decoration: underline; }
 }
 
 .pl1 > li::before {
-    content: "ꙮ";
+    content: "●";
     position: absolute;
     left: 0;
     color: #E0E0E0;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .pl2 {
